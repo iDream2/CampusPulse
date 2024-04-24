@@ -1,0 +1,17 @@
+.navbar{
+    display: flex ;
+    gap: 65rem;
+
+}
+.navbar--body{
+    display: block;
+}
+
+.navbar--left{
+    display: flex;
+    gap: 4rem;
+}
+.navbar--right{
+    display: flex;
+    gap: 2rem;
+}
