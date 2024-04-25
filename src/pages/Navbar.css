@@ -1,15 +1,19 @@
 .navbar{
     display: flex ;
     gap: 65rem;
+    background-color: #94FFD8 ;
 
 }
 .navbar--body{
     display: block;
+    
 }
 
 .navbar--left{
     display: flex;
     gap: 4rem;
+    font-weight: bold;
+    ;
 }
 .navbar--right{
     display: flex;

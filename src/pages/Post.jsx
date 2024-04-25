@@ -1,72 +1,81 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-export default function Post(event){
+export default function Post(){
 
-    // const [postForm, setpostForm ] = React.useState({
-    //     eventName : "",
-    //     eventType : "",
-    //     eventForm : "",
+    const [postForm, setpostForm ] = React.useState(
+        {
+        
+            eventName        : "",
+            eventType        : "",
+            eventDescription : "",
+            eventDate        : "",
+        }
 
-    // })
+    )
 
-    // function onPost(){
-    //     setpostForm(
-    //         {
-
-    //         }
-    //     )
-    // }
+    function postData(event){
+        setpostForm( (prevState) => ({
+            ...prevState,
+            [event.target.name] : event.target.value
+        }))
+    }
 
         //Scrimba
-    // function handleSubmit(event) {
-    //     // console.log(event)
-    //     const {name, value} = event.target
-
-    //     setpostForm(prevFormData => {
-    //         return {
-    //             ...prevFormData,
-    //             [name]: value
-    //         }
-    //     })
+    
+    
     // }
 
     const navigate = useNavigate();
 
     function handleClick(){
+        // console.log(postForm)
         navigate("/Home")
     }
 
     return(
-        <div>Post Window
+        <div>
 
             <form action="">
 
                 <label htmlFor="eventName">Event Name</label>
-                <input type="text" 
+                <input 
+                    type = "text" 
                     name = "eventName"
-                    id="eventName"
-                    // value = {event.eventName}
+                    id   = "eventName"
+                    value = {postForm.eventName}
+                    onChange={postData}
                 />
                 
                 <label htmlFor="eventType">Event Type</label>
                 <input 
-                type="text"  
-                name = "eventType"
-                id="eventType"
-                // value = {event.eventType}
+                    type = "text"  
+                    name = "eventType"
+                    id   = "eventType"
+                    value = {postForm.eventType}
+                    onChange = {postData}
                 />
                 
                 <label htmlFor="eventDescription">Event Description</label>
                 <textarea 
-                name="eventDescription"
-                id="eventDescription" 
-                cols="30"
-                rows="10">
+                    name = "eventDescription"
+                    id   = "eventDescription" 
+                    cols = "30"
+                    rows = "10"
+                    value = {postForm.eventDescription}
+                    onChange = {postData}
+
+                    >
                 
                 </textarea>
 
                 <label htmlFor="Date of event">Date of Event</label>
-                <input type="date" id="Date of event" name="event-start" value="2024-04-22" min="2018-01-01" max="2025-12-31" />
+                <input 
+                    type="date" 
+                    id="Date of event" 
+                    name="event-start" 
+                    //value="2024-04-22"
+                    min="2018-01-01" 
+                    max="2025-12-31" />
 
                {/* <label htmlFor = "eventForm">Registration Link</label>  */}
                 

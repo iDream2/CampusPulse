@@ -2,14 +2,27 @@ import Event from "./Event"
 
 export default function Home(){
 
+    //fetch
+
+ const eventNamefromAPI = "techie-techie"
+ const eventTypefromAPI = "Tech"
+ const eventFormfromAPI = "abc@google.com"
      return(
         <div>
             <Event
-                eventName = "techie-techie"
-                eventType = "Tech"
+                eventName = {eventNamefromAPI}
+                eventType = {eventTypefromAPI}
                 //date of the event here
-                eventForm = "abc@google.com"
+                eventForm = {eventFormfromAPI}
             />
+            <Event
+                eventName = {eventNamefromAPI}
+                eventType = {eventTypefromAPI}
+                //date of the event here
+                eventForm = {eventFormfromAPI}
+            />
+
+
         </div>
     )
 }
