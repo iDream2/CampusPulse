@@ -1,2 +1,0 @@
-# CampusPulse
-Minor Project
