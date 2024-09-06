@@ -1,0 +1,15 @@
+#Navbar--entire{
+    background-image: linear-gradient(to right,#FC4100, #FFC55A,#00215E);
+    
+}
+#Navbar--left{
+    display: flex;
+    gap: 1rem;
+}
+#Site-name{
+    font-weight: bold;
+}
+
+#Logo{
+    background-image: url(../assets/react.svg);
+}

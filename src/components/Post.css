@@ -1,0 +1,7 @@
+.posts{
+    /* background-color: rgb(117, 73, 250); */
+    border-width: 32px;
+    background-image: linear-gradient(red, yellow, green);
+    border-radius: 4rem;
+    /* background-image: url(../assets/bgimg.jpg.png) ; */
+}
